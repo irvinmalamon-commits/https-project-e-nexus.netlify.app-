@@ -1,0 +1,1145 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Project e-NEXUS | Aliaga District</title>
+  <meta name="description" content="Project e-NEXUS, the school services and stakeholder transactions portal for Aliaga District, Nueva Ecija.">
+
+  <style>
+    :root {
+      --navy: #12345a;
+      --blue: #1d5fa7;
+      --light: #f3f6fb;
+      --white: #ffffff;
+      --text: #253348;
+      --muted: #65748b;
+      --border: #dce4ef;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--text);
+      background: var(--light);
+      line-height: 1.6;
+    }
+
+    header {
+      background: var(--navy);
+      color: var(--white);
+      padding: 22px 6%;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .logo {
+      display: grid;
+      place-items: center;
+      width: 48px;
+      height: 48px;
+      border-radius: 12px;
+      background: var(--white);
+      color: var(--navy);
+      font-size: 22px;
+      font-weight: bold;
+    }
+
+    h1, h2, h3, p {
+      margin-top: 0;
+    }
+
+    .brand h1 {
+      margin-bottom: 2px;
+      font-size: 22px;
+    }
+
+    .brand p {
+      margin-bottom: 0;
+      color: #d9e8fb;
+      font-size: 14px;
+    }
+
+    main {
+      max-width: 1150px;
+      margin: 0 auto;
+      padding: 32px 20px 50px;
+    }
+
+    .notice {
+      padding: 12px 16px;
+      margin-bottom: 24px;
+      border: 1px solid #e9d49b;
+      border-radius: 10px;
+      background: #fff8e6;
+      color: #765719;
+      font-size: 14px;
+    }
+
+    .welcome {
+      padding: 30px;
+      border-radius: 16px;
+      background: var(--white);
+      border: 1px solid var(--border);
+      margin-bottom: 28px;
+    }
+
+    .welcome h2 {
+      color: var(--navy);
+      font-size: 28px;
+      margin-bottom: 10px;
+    }
+
+    .welcome p {
+      max-width: 720px;
+      color: var(--muted);
+      margin-bottom: 0;
+    }
+
+    .section-title {
+      margin-bottom: 16px;
+      color: var(--navy);
+      font-size: 21px;
+    }
+
+    .modules {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .module {
+      padding: 22px;
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+    }
+
+    .module-icon {
+      display: grid;
+      place-items: center;
+      width: 44px;
+      height: 44px;
+      border-radius: 10px;
+      background: #eaf2fc;
+      font-size: 23px;
+      margin-bottom: 14px;
+    }
+
+    .module h3 {
+      color: var(--navy);
+      font-size: 17px;
+      margin-bottom: 8px;
+    }
+
+    .module p {
+      color: var(--muted);
+      font-size: 14px;
+      margin-bottom: 0;
+    }
+
+    .access {
+      margin-top: 28px;
+      padding: 24px;
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+    }
+
+    .access h2 {
+      color: var(--navy);
+      font-size: 20px;
+    }
+
+    .access p {
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .contact {
+      margin-top: 28px;
+      padding: 22px;
+      background: #e8eff8;
+      border-radius: 12px;
+    }
+
+    .contact h2 {
+      font-size: 18px;
+      color: var(--navy);
+    }
+
+    .contact p {
+      margin-bottom: 0;
+      font-size: 14px;
+    }
+
+    footer {
+      padding: 22px;
+      text-align: center;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    @media (max-width: 800px) {
+      .modules {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 520px) {
+      .modules {
+        grid-template-columns: 1fr;
+      }
+
+      .welcome {
+        padding: 22px;
+      }
+
+      .welcome h2 {
+        font-size: 23px;
+      }
+
+      header {
+        padding: 20px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="brand">
+      <div class="logo" aria-hidden="true">N</div>
+      <div>
+        <h1>Project e-NEXUS</h1>
+        <p>Electronic Network for Excellence in Unified School Services</p>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="notice" role="status">
+      <strong>Development preview:</strong>
+      Secure sign-in is connected. Other modules, data processing,
+      approvals, and notifications may still be under development.
+    </div>
+
+    <section class="welcome">
+      <h2>Welcome to Project e-NEXUS</h2>
+      <p>
+        A proposed digital platform for coordinating school services,
+        tracking documents, monitoring projects, and improving transactions
+        among schools and authorized partner agencies in Aliaga District,
+        Nueva Ecija.
+      </p>
+    </section>
+
+    <section aria-labelledby="modules-title">
+      <h2 class="section-title" id="modules-title">System Modules</h2>
+
+      <div class="modules">
+        <article class="module">
+          <div class="module-icon" aria-hidden="true">📄</div>
+          <h3>Document Routing and Tracking</h3>
+          <p>
+            Track submitted documents, assigned offices, review status,
+            approvals, and release records.
+          </p>
+        </article>
+
+        <article class="module">
+          <div class="module-icon" aria-hidden="true">📊</div>
+          <h3>Project Monitoring and Evaluation</h3>
+          <p>
+            Organize project proposals, milestones, progress reports,
+            accomplishments, and evaluation records.
+          </p>
+        </article>
+
+        <article class="module">
+          <div class="module-icon" aria-hidden="true">📝</div>
+          <h3>Online Requests and Approvals</h3>
+          <p>
+            Provide a structured process for submitting requests and
+            recording authorized decisions.
+          </p>
+        </article>
+
+        <article class="module">
+          <div class="module-icon" aria-hidden="true">📢</div>
+          <h3>Announcements and Circulars</h3>
+          <p>
+            Organize official announcements, memoranda, circulars,
+            and school advisories.
+          </p>
+        </article>
+
+        <article class="module">
+          <div class="module-icon" aria-hidden="true">💬</div>
+          <h3>Stakeholder Inquiries</h3>
+          <p>
+            Provide a channel for authorized users and community partners
+            to submit inquiries and track responses.
+          </p>
+        </article>
+
+        <article class="module">
+          <div class="module-icon" aria-hidden="true">🔐</div>
+          <h3>Secure User Access</h3>
+          <p>
+            Planned role-based access for district administrators,
+            school administrators, school personnel, and approved partners.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <section class="access">
+      <h2>Access and Account Security</h2>
+      <p>
+        Accounts will be created or approved by authorized administrators.
+        Access to school records and system functions will depend on assigned
+        roles and permissions.
+      </p>
+      <p>
+        <strong>Account registration and login are not available in this preview.</strong>
+      </p>
+    </section>
+
+
+    <section id="enexus-public-announcements" class="access" style="margin-top:28px;">
+      <h2>Announcements and Circulars</h2>
+      <p>Current published announcements and advisories.</p>
+      <button id="enexus-public-announcements-refresh" type="button" style="padding:9px 14px; cursor:pointer;">Refresh Announcements</button>
+      <p id="enexus-public-announcements-message" role="status" aria-live="polite"></p>
+      <div id="enexus-public-announcements-list"></div>
+    </section>
+
+    <section class="contact">
+      <h2>For Authorized Users and Partner Agencies</h2>
+      <p>
+        Please follow your school or district's official instructions for
+        access. Do not submit confidential documents or personal information
+        through this preview page.
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    Project e-NEXUS | Aliaga District, Nueva Ecija
+    <br>
+    School services and stakeholder transactions system
+  </footer>
+  
+<!-- e-NEXUS Login Section -->
+<section id="enexus-login" style="max-width: 440px; margin: 40px auto; padding: 24px; border: 1px solid #d1d5db; border-radius: 12px; font-family: Arial, sans-serif; background: #fff;">
+  <h2 style="text-align: center;">Project e-NEXUS Login</h2>
+  <p style="text-align: center;">Sign in using your approved e-NEXUS account.</p>
+
+  <form id="enexus-login-form">
+    <label for="enexus-email">Email address</label>
+    <input id="enexus-email" name="email" type="email" autocomplete="username" required
+      style="display: block; box-sizing: border-box; width: 100%; padding: 12px; margin: 8px 0 16px;">
+
+    <label for="enexus-password">Password</label>
+    <input id="enexus-password" name="password" type="password" autocomplete="current-password" required
+      style="display: block; box-sizing: border-box; width: 100%; padding: 12px; margin: 8px 0 16px;">
+
+    <button type="submit" style="width: 100%; padding: 12px; cursor: pointer;">Sign In</button>
+    <p id="enexus-login-message" role="status" aria-live="polite"></p>
+  </form>
+
+  <button id="enexus-show-register" type="button"
+    style="width: 100%; padding: 12px; margin-top: 8px; cursor: pointer;">
+    Request an e-NEXUS Account
+  </button>
+</section>
+<!-- End e-NEXUS Login Section -->
+
+<!-- e-NEXUS Registration Section: a sibling of the login section, not nested inside it -->
+<section id="enexus-register" style="display: none; max-width: 500px; margin: 24px auto; padding: 24px; border: 1px solid #d1d5db; border-radius: 12px; font-family: Arial, sans-serif; background: #fff;">
+  <h2>Request e-NEXUS Access</h2>
+  <p>Create an account and submit an access request. Email confirmation and district administrator approval are required before access is granted.</p>
+
+  <form id="enexus-register-form">
+    <label for="enexus-register-name">Full Name</label>
+    <input id="enexus-register-name" type="text" required autocomplete="name"
+      style="display:block; box-sizing:border-box; width:100%; padding:10px; margin:6px 0 14px;">
+
+    <label for="enexus-register-email">Email Address</label>
+    <input id="enexus-register-email" type="email" required autocomplete="email"
+      style="display:block; box-sizing:border-box; width:100%; padding:10px; margin:6px 0 14px;">
+
+    <label for="enexus-register-password">Create Password</label>
+    <input id="enexus-register-password" type="password" minlength="12" required autocomplete="new-password"
+      style="display:block; box-sizing:border-box; width:100%; padding:10px; margin:6px 0 4px;">
+    <small>Use at least 12 characters.</small>
+
+    <label for="enexus-register-role" style="display:block; margin-top:14px;">Account Type</label>
+    <select id="enexus-register-role" required
+      style="display:block; box-sizing:border-box; width:100%; padding:10px; margin:6px 0 14px;">
+      <option value="school_personnel">School Personnel</option>
+      <option value="partner">Partner Agency</option>
+    </select>
+
+    <label for="enexus-register-organization">School or Organization</label>
+    <input id="enexus-register-organization" type="text" required
+      style="display:block; box-sizing:border-box; width:100%; padding:10px; margin:6px 0 14px;">
+
+    <label for="enexus-register-justification">Reason for Request</label>
+    <textarea id="enexus-register-justification" rows="3" required
+      style="display:block; box-sizing:border-box; width:100%; padding:10px; margin:6px 0 14px;"></textarea>
+
+    <button id="enexus-register-submit" type="submit" style="width:100%; padding:12px; cursor:pointer;">
+      Register and Request Access
+    </button>
+    <p id="enexus-register-message" role="status" aria-live="polite"></p>
+  </form>
+
+  <button id="enexus-back-to-login" type="button" style="width:100%; padding:12px; cursor:pointer;">
+    Back to Login
+  </button>
+</section>
+
+<!-- e-NEXUS Dashboard -->
+<section id="enexus-dashboard"
+         style="display: none; max-width: 900px; margin: 30px auto; padding: 24px; font-family: Arial, sans-serif;">
+
+  <h2>Welcome to Project e-NEXUS</h2>
+  <p id="enexus-user-info"></p>
+
+  <h3>Available Services</h3>
+  <p id="enexus-role-message"></p>
+
+  <!-- District Administrator: account request review -->
+  <section id="enexus-admin-requests" style="display:none; margin:24px 0; padding:18px; border:1px solid #cbd5e1; border-radius:10px;">
+    <h3>Account Access Requests</h3>
+    <p>Review requests before granting access. Approved applicants must have a confirmed email address.</p>
+    <button id="enexus-refresh-requests" type="button" style="padding:9px 14px; cursor:pointer;">Refresh Requests</button>
+    <p id="enexus-admin-requests-message" role="status" aria-live="polite"></p>
+    <div id="enexus-admin-requests-list"></div>
+  </section>
+
+
+  <!-- District Administrator: announcement management -->
+  <section id="enexus-admin-announcements" style="display:none; margin:24px 0; padding:18px; border:1px solid #cbd5e1; border-radius:10px;">
+    <h3>Announcements and Circulars — Management</h3>
+    <p>Create announcements, save drafts, publish them, edit them, or archive them. Only approved District Administrators can manage announcements.</p>
+    <form id="enexus-announcement-form">
+      <input id="enexus-announcement-id" type="hidden">
+      <label for="enexus-announcement-title">Announcement title</label>
+      <input id="enexus-announcement-title" type="text" required maxlength="200"
+        style="display:block; box-sizing:border-box; width:100%; padding:10px; margin:6px 0 14px;">
+      <label for="enexus-announcement-category">Category</label>
+      <select id="enexus-announcement-category" required
+        style="display:block; box-sizing:border-box; width:100%; padding:10px; margin:6px 0 14px;">
+        <option>Announcement</option>
+        <option>Memorandum</option>
+        <option>Advisory</option>
+        <option>Circular</option>
+      </select>
+      <label for="enexus-announcement-content">Message / content</label>
+      <textarea id="enexus-announcement-content" rows="6" required
+        style="display:block; box-sizing:border-box; width:100%; padding:10px; margin:6px 0 14px;"></textarea>
+      <label for="enexus-announcement-expires">Optional expiration date and time</label>
+      <input id="enexus-announcement-expires" type="datetime-local"
+        style="display:block; box-sizing:border-box; width:100%; padding:10px; margin:6px 0 14px;">
+      <button id="enexus-announcement-save-draft" type="button" style="padding:10px 14px; margin:4px; cursor:pointer;">Save Draft</button>
+      <button id="enexus-announcement-publish" type="button" style="padding:10px 14px; margin:4px; cursor:pointer;">Publish</button>
+      <button id="enexus-announcement-cancel-edit" type="button" style="padding:10px 14px; margin:4px; cursor:pointer;">Clear Form</button>
+    </form>
+    <p id="enexus-admin-announcements-message" role="status" aria-live="polite"></p>
+    <h4>All Announcements</h4>
+    <button id="enexus-admin-announcements-refresh" type="button" style="padding:9px 14px; cursor:pointer;">Refresh List</button>
+    <div id="enexus-admin-announcements-list"></div>
+  </section>
+
+  <button id="enexus-logout" type="button"
+          style="padding: 10px 18px; cursor: pointer;">
+    Log Out
+  </button>
+
+</section>
+<!-- End e-NEXUS Dashboard -->
+
+
+<!-- e-NEXUS Supabase connection and login handler -->
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script>
+  const SUPABASE_URL = "https://khbtkayceidepkedosdi.supabase.co";
+  const SUPABASE_PUBLISHABLE_KEY = "sb_publishable_gpD81oogOfrKt36hAalJFg_4FOiAWGD";
+
+  const supabaseClient = window.supabase.createClient(
+    SUPABASE_URL,
+    SUPABASE_PUBLISHABLE_KEY
+  );
+
+  const loginForm = document.getElementById("enexus-login-form");
+  const emailInput = document.getElementById("enexus-email");
+  const passwordInput = document.getElementById("enexus-password");
+  const message = document.getElementById("enexus-login-message");
+
+
+const loginSection = document.getElementById("enexus-login");
+const dashboard = document.getElementById("enexus-dashboard");
+const userInfo = document.getElementById("enexus-user-info");
+const roleMessage = document.getElementById("enexus-role-message");
+const logoutButton = document.getElementById("enexus-logout");
+const adminRequestsSection = document.getElementById("enexus-admin-requests");
+const refreshRequestsButton = document.getElementById("enexus-refresh-requests");
+const adminRequestsMessage = document.getElementById("enexus-admin-requests-message");
+
+const adminRequestsList = document.getElementById("enexus-admin-requests-list");
+const adminAnnouncementsSection = document.getElementById("enexus-admin-announcements");
+const announcementForm = document.getElementById("enexus-announcement-form");
+const announcementIdInput = document.getElementById("enexus-announcement-id");
+const announcementTitleInput = document.getElementById("enexus-announcement-title");
+const announcementCategoryInput = document.getElementById("enexus-announcement-category");
+const announcementContentInput = document.getElementById("enexus-announcement-content");
+const announcementExpiresInput = document.getElementById("enexus-announcement-expires");
+const announcementMessage = document.getElementById("enexus-admin-announcements-message");
+const adminAnnouncementsList = document.getElementById("enexus-admin-announcements-list");
+const publicAnnouncementsMessage = document.getElementById("enexus-public-announcements-message");
+const publicAnnouncementsList = document.getElementById("enexus-public-announcements-list");
+const publicAnnouncementsRefresh = document.getElementById("enexus-public-announcements-refresh");
+const adminAnnouncementsRefresh = document.getElementById("enexus-admin-announcements-refresh");
+const saveDraftButton = document.getElementById("enexus-announcement-save-draft");
+const publishAnnouncementButton = document.getElementById("enexus-announcement-publish");
+const clearAnnouncementButton = document.getElementById("enexus-announcement-cancel-edit");
+let currentAdminUser = null;
+
+  
+const registerSection = document.getElementById("enexus-register");
+const showRegisterButton = document.getElementById("enexus-show-register");
+const backToLoginButton = document.getElementById("enexus-back-to-login");
+const registerForm = document.getElementById("enexus-register-form");
+const registerMessage = document.getElementById("enexus-register-message");
+
+if (showRegisterButton && registerSection && loginSection) {
+  showRegisterButton.addEventListener("click", function (event) {
+    event.preventDefault();
+    registerSection.style.display = "block";
+    loginSection.style.display = "none";
+    registerSection.scrollIntoView({ behavior: "smooth", block: "start" });
+  });
+}
+
+if (backToLoginButton && registerSection && loginSection) {
+  backToLoginButton.addEventListener("click", function (event) {
+    event.preventDefault();
+    registerSection.style.display = "none";
+    loginSection.style.display = "block";
+    loginSection.scrollIntoView({ behavior: "smooth", block: "start" });
+  });
+}
+
+async function submitAccessRequest(user, values) {
+  // Do not let an existing profiled account submit a new registration request.
+  const { data: existingProfile, error: profileError } = await supabaseClient
+    .from("e_nexus_profiles")
+    .select("user_id")
+    .eq("user_id", user.id)
+    .maybeSingle();
+
+  if (profileError) {
+    throw new Error("Could not verify whether this account already has a profile. Please try again.");
+  }
+  if (existingProfile) {
+    throw new Error("This account already has an e-NEXUS profile. Please use the login page or contact the administrator.");
+  }
+
+  const { error: requestError } = await supabaseClient.rpc(
+    "submit_e_nexus_account_request",
+    {
+      p_full_name: values.fullName,
+      p_email: values.email,
+      p_requested_role: values.role,
+      p_school_id: null,
+      p_organization_name: values.organization,
+      p_justification: values.justification
+    }
+  );
+
+  if (requestError) {
+    throw new Error(requestError.message || "The access request could not be submitted.");
+  }
+}
+
+if (registerForm && registerMessage) {
+  registerForm.addEventListener("submit", async function (event) {
+    event.preventDefault();
+
+    const submitButton = document.getElementById("enexus-register-submit");
+    if (submitButton) submitButton.disabled = true;
+    registerMessage.textContent = "Processing your account and access request...";
+
+    const values = {
+      fullName: document.getElementById("enexus-register-name").value.trim(),
+      email: document.getElementById("enexus-register-email").value.trim().toLowerCase(),
+      password: document.getElementById("enexus-register-password").value,
+      role: document.getElementById("enexus-register-role").value,
+      organization: document.getElementById("enexus-register-organization").value.trim(),
+      justification: document.getElementById("enexus-register-justification").value.trim()
+    };
+
+    let signedInUser = null;
+    let shouldSignOut = false;
+
+    try {
+      // If the applicant already confirmed their email, sign in and submit the pending request.
+      const signInResult = await supabaseClient.auth.signInWithPassword({
+        email: values.email,
+        password: values.password
+      });
+
+      if (!signInResult.error && signInResult.data.user) {
+        signedInUser = signInResult.data.user;
+        shouldSignOut = true;
+        await submitAccessRequest(signedInUser, values);
+        registerForm.reset();
+        registerMessage.textContent = "Your access request has been submitted and is pending district administrator review. You may now return to the login page.";
+        return;
+      }
+
+      if (signInResult.error && signInResult.error.code === "email_not_confirmed") {
+        throw new Error("Please confirm your email first. Open the confirmation link sent by Supabase, then return here and submit this form again using the same email and password.");
+      }
+
+      // For a new email, create an Auth account. With email confirmation enabled,
+      // Supabase may not create a session until the applicant confirms their email.
+      const signUpResult = await supabaseClient.auth.signUp({
+        email: values.email,
+        password: values.password,
+        options: {
+          data: { full_name: values.fullName },
+          emailRedirectTo: window.location.origin
+        }
+      });
+
+      if (signUpResult.error) {
+        const code = signUpResult.error.code || "";
+        if (code === "email_not_confirmed") {
+          throw new Error("Please confirm your email first. Then return here and submit the form again using the same email and password.");
+        }
+        throw new Error(signUpResult.error.message || "Account registration failed.");
+      }
+
+      if (signUpResult.data.user && signUpResult.data.session) {
+        signedInUser = signUpResult.data.user;
+        shouldSignOut = true;
+        await submitAccessRequest(signedInUser, values);
+        registerForm.reset();
+        registerMessage.textContent = "Your access request has been submitted and is pending district administrator review.";
+      } else {
+        registerMessage.textContent = "Account created. Check your email and click the confirmation link. After confirming, return to this page and submit this form again with the same email and password to send your access request. Your account does not have e-NEXUS access until the administrator approves it.";
+      }
+    } catch (error) {
+      registerMessage.textContent = error.message || "Registration could not be completed. Please try again.";
+    } finally {
+      if (shouldSignOut) {
+        const { error: signOutError } = await supabaseClient.auth.signOut();
+        if (signOutError) {
+          registerMessage.textContent += " Please sign out before using another account.";
+        }
+      }
+      if (submitButton) submitButton.disabled = false;
+    }
+  });
+}
+
+const roleDescriptions = {
+  district_admin: "District Administrator: District-level services.",
+  school_admin: "School Administrator: Authorized school-level services.",
+  school_personnel: "School Personnel: Services permitted for your account.",
+  partner: "Partner Agency: Services permitted for approved partners."
+};
+
+async function verifyProfile(user) {
+  const { data: profile, error } = await supabaseClient
+    .from("e_nexus_profiles")
+    .select("full_name, role, account_status")
+    .eq("user_id", user.id)
+    .maybeSingle();
+
+  if (error) throw new Error("Unable to verify your account permissions.");
+
+  const allowedRoles = [
+    "district_admin",
+    "school_admin",
+    "school_personnel",
+    "partner"
+  ];
+
+  if (
+    !profile ||
+    profile.account_status !== "approved" ||
+    !allowedRoles.includes(profile.role)
+  ) {
+    throw new Error("Your account is not approved for access.");
+  }
+
+  return profile;
+}
+
+function showLogin() {
+  dashboard.style.display = "none";
+  if (registerSection) registerSection.style.display = "none";
+  if (adminRequestsSection) adminRequestsSection.style.display = "none";
+  if (adminRequestsList) adminRequestsList.replaceChildren();
+  if (adminAnnouncementsSection) adminAnnouncementsSection.style.display = "none";
+  currentAdminUser = null;
+  loginSection.style.display = "block";
+  userInfo.textContent = "";
+  roleMessage.textContent = "";
+}
+
+function showDashboard(profile) {
+  loginSection.style.display = "none";
+  if (registerSection) registerSection.style.display = "none";
+  dashboard.style.display = "block";
+  userInfo.textContent =
+    "Signed in as " + profile.full_name +
+    " | Role: " + profile.role.replaceAll("_", " ");
+  roleMessage.textContent = roleDescriptions[profile.role];
+  if (adminAnnouncementsSection) {
+    const isDistrictAdmin = profile.role === "district_admin";
+    adminAnnouncementsSection.style.display = isDistrictAdmin ? "block" : "none";
+    if (isDistrictAdmin) loadAdminAnnouncements();
+    else if (adminAnnouncementsList) adminAnnouncementsList.replaceChildren();
+  }
+
+  if (adminRequestsSection) {
+    const isDistrictAdmin = profile.role === "district_admin";
+    adminRequestsSection.style.display = isDistrictAdmin ? "block" : "none";
+    if (isDistrictAdmin) loadAccountRequests();
+    else if (adminRequestsList) adminRequestsList.replaceChildren();
+  }
+}
+
+function formatRequestDate(value) {
+  if (!value) return "Date unavailable";
+  const date = new Date(value);
+  return Number.isNaN(date.getTime()) ? value : date.toLocaleString();
+}
+
+async function loadAccountRequests() {
+  if (!adminRequestsList || !adminRequestsMessage) return;
+  adminRequestsMessage.textContent = "Loading pending requests...";
+  adminRequestsList.replaceChildren();
+  if (refreshRequestsButton) refreshRequestsButton.disabled = true;
+
+  try {
+    const { data: requests, error } = await supabaseClient
+      .from("e_nexus_account_requests")
+      .select("id, full_name, email, requested_role, organization_name, justification, request_status, created_at")
+      .eq("request_status", "pending")
+      .order("created_at", { ascending: true });
+
+    if (error) throw error;
+
+    if (!requests || requests.length === 0) {
+      adminRequestsMessage.textContent = "There are no pending access requests.";
+      return;
+    }
+
+    adminRequestsMessage.textContent = requests.length + " pending request(s).";
+    requests.forEach(function (request) {
+      const card = document.createElement("article");
+      card.style.cssText = "margin:14px 0; padding:14px; border:1px solid #d1d5db; border-radius:8px;";
+
+      const heading = document.createElement("h4");
+      heading.textContent = request.full_name || "Name not provided";
+      card.appendChild(heading);
+
+      const details = document.createElement("p");
+      details.textContent = "Email: " + (request.email || "—") +
+        " | Requested role: " + String(request.requested_role || "—").replaceAll("_", " ") +
+        " | Organization: " + (request.organization_name || "—") +
+        " | Submitted: " + formatRequestDate(request.created_at);
+      card.appendChild(details);
+
+      if (request.justification) {
+        const reason = document.createElement("p");
+        reason.textContent = "Reason: " + request.justification;
+        card.appendChild(reason);
+      }
+
+      const approve = document.createElement("button");
+      approve.type = "button";
+      approve.textContent = "Approve Request";
+      approve.style.cssText = "padding:9px 12px; margin:4px 8px 4px 0; cursor:pointer;";
+      approve.addEventListener("click", function () {
+        reviewAccountRequest(request.id, "approved", approve, reject);
+      });
+      card.appendChild(approve);
+
+      const reject = document.createElement("button");
+      reject.type = "button";
+      reject.textContent = "Reject Request";
+      reject.style.cssText = "padding:9px 12px; margin:4px; cursor:pointer;";
+      reject.addEventListener("click", function () {
+        reviewAccountRequest(request.id, "rejected", approve, reject);
+      });
+      card.appendChild(reject);
+      adminRequestsList.appendChild(card);
+    });
+  } catch (error) {
+    adminRequestsMessage.textContent = "Could not load requests: " + (error.message || "Unknown error") +
+      ". Confirm you are signed in as an approved District Administrator and that the account_requests SELECT policy is enabled.";
+  } finally {
+    if (refreshRequestsButton) refreshRequestsButton.disabled = false;
+  }
+}
+
+async function reviewAccountRequest(requestId, decision, approveButton, rejectButton) {
+  const verb = decision === "approved" ? "approve" : "reject";
+  if (!window.confirm("Are you sure you want to " + verb + " this access request?")) return;
+  if (approveButton) approveButton.disabled = true;
+  if (rejectButton) rejectButton.disabled = true;
+  if (adminRequestsMessage) adminRequestsMessage.textContent = "Processing " + verb + "al...";
+
+  try {
+    const { data, error } = await supabaseClient.rpc("review_e_nexus_account_request", {
+      p_request_id: requestId,
+      p_decision: decision
+    });
+    if (error) throw error;
+    if (adminRequestsMessage) adminRequestsMessage.textContent = data || ("Request " + decision + ".");
+    await loadAccountRequests();
+  } catch (error) {
+    if (adminRequestsMessage) adminRequestsMessage.textContent = "Could not " + verb + " request: " +
+      (error.message || "Unknown error");
+    if (approveButton) approveButton.disabled = false;
+    if (rejectButton) rejectButton.disabled = false;
+  }
+}
+
+if (refreshRequestsButton) {
+  refreshRequestsButton.addEventListener("click", loadAccountRequests);
+}
+
+if (loginForm && emailInput && passwordInput && message) {
+  loginForm.addEventListener("submit", async function (event) {
+    event.preventDefault();
+
+    const submitButton = loginForm.querySelector('button[type="submit"]');
+    if (submitButton) submitButton.disabled = true;
+
+    message.textContent = "Signing in...";
+
+    try {
+      const { data, error } =
+        await supabaseClient.auth.signInWithPassword({
+          email: emailInput.value.trim(),
+          password: passwordInput.value
+        });
+
+      if (error) throw error;
+
+      const profile = await verifyProfile(data.user);
+      currentAdminUser = data.user;
+
+      passwordInput.value = "";
+      message.textContent = "";
+      showDashboard(profile);
+
+    } catch (error) {
+      await supabaseClient.auth.signOut();
+      showLogin();
+
+      message.textContent =
+        error.message === "Invalid login credentials"
+          ? "Incorrect email or password."
+          : error.message || "Sign-in failed. Please try again.";
+    } finally {
+      if (submitButton) submitButton.disabled = false;
+    }
+  });
+}
+
+
+// ---------- Announcements and Circulars ----------
+function localDateTimeToIso(value) {
+  if (!value) return null;
+  const date = new Date(value);
+  return Number.isNaN(date.getTime()) ? null : date.toISOString();
+}
+
+function isoToLocalDateTime(value) {
+  if (!value) return "";
+  const date = new Date(value);
+  if (Number.isNaN(date.getTime())) return "";
+  const offset = date.getTimezoneOffset();
+  return new Date(date.getTime() - offset * 60000).toISOString().slice(0, 16);
+}
+
+function resetAnnouncementForm() {
+  if (announcementForm) announcementForm.reset();
+  if (announcementIdInput) announcementIdInput.value = "";
+  if (announcementMessage) announcementMessage.textContent = "";
+}
+
+async function saveAnnouncement(status) {
+  if (!currentAdminUser) {
+    if (announcementMessage) announcementMessage.textContent = "Please sign in again as an administrator.";
+    return;
+  }
+  if (!announcementForm.reportValidity()) return;
+
+  const title = announcementTitleInput.value.trim();
+  const content = announcementContentInput.value.trim();
+  if (!title || !content) {
+    announcementMessage.textContent = "Enter both a title and message.";
+    return;
+  }
+
+  const isPublished = status === "published";
+  const expiresAt = localDateTimeToIso(announcementExpiresInput.value);
+  if (announcementExpiresInput.value && !expiresAt) {
+    announcementMessage.textContent = "Please enter a valid expiration date and time.";
+    return;
+  }
+  if (isPublished && expiresAt && new Date(expiresAt) <= new Date()) {
+    announcementMessage.textContent = "The expiration date must be in the future.";
+    return;
+  }
+
+  const id = announcementIdInput.value;
+  const payload = {
+    title,
+    category: announcementCategoryInput.value,
+    content,
+    status,
+    published_at: isPublished ? new Date().toISOString() : null,
+    expires_at: expiresAt,
+    updated_by: currentAdminUser.id,
+    updated_at: new Date().toISOString()
+  };
+
+  saveDraftButton.disabled = true;
+  publishAnnouncementButton.disabled = true;
+  announcementMessage.textContent = status === "published" ? "Publishing announcement..." : "Saving draft...";
+
+  try {
+    let result;
+    if (id) {
+      result = await supabaseClient
+        .from("e_nexus_announcements")
+        .update(payload)
+        .eq("id", id)
+        .select("id")
+        .single();
+    } else {
+      result = await supabaseClient
+        .from("e_nexus_announcements")
+        .insert({ ...payload, created_by: currentAdminUser.id })
+        .select("id")
+        .single();
+    }
+    if (result.error) throw result.error;
+
+    announcementMessage.textContent = status === "published"
+      ? "Announcement published successfully."
+      : "Draft saved successfully.";
+    resetAnnouncementForm();
+    await loadAdminAnnouncements();
+    await loadPublicAnnouncements();
+  } catch (error) {
+    announcementMessage.textContent = "Could not save announcement: " + (error.message || "Unknown error");
+  } finally {
+    saveDraftButton.disabled = false;
+    publishAnnouncementButton.disabled = false;
+  }
+}
+
+async function loadAdminAnnouncements() {
+  if (!adminAnnouncementsList || !announcementMessage) return;
+  adminAnnouncementsList.replaceChildren();
+  announcementMessage.textContent = "Loading announcements...";
+  if (adminAnnouncementsRefresh) adminAnnouncementsRefresh.disabled = true;
+
+  try {
+    const { data, error } = await supabaseClient
+      .from("e_nexus_announcements")
+      .select("id, title, category, content, status, published_at, expires_at, created_at")
+      .order("created_at", { ascending: false });
+    if (error) throw error;
+
+    if (!data || data.length === 0) {
+      announcementMessage.textContent = "No announcements yet. Create one using the form above.";
+      return;
+    }
+
+    announcementMessage.textContent = data.length + " announcement(s) found.";
+    data.forEach(function (item) {
+      const card = document.createElement("article");
+      card.style.cssText = "margin:14px 0; padding:14px; border:1px solid #d1d5db; border-radius:8px;";
+      const heading = document.createElement("h4");
+      heading.textContent = item.title;
+      card.appendChild(heading);
+
+      const meta = document.createElement("p");
+      meta.textContent = item.category + " | Status: " + item.status +
+        " | Created: " + formatRequestDate(item.created_at) +
+        (item.expires_at ? " | Expires: " + formatRequestDate(item.expires_at) : "");
+      card.appendChild(meta);
+
+      const preview = document.createElement("p");
+      preview.textContent = item.content.length > 300 ? item.content.slice(0, 300) + "…" : item.content;
+      card.appendChild(preview);
+
+      const edit = document.createElement("button");
+      edit.type = "button";
+      edit.textContent = "Edit";
+      edit.style.cssText = "padding:8px 12px; margin:4px; cursor:pointer;";
+      edit.addEventListener("click", function () {
+        announcementIdInput.value = item.id;
+        announcementTitleInput.value = item.title;
+        announcementCategoryInput.value = item.category;
+        announcementContentInput.value = item.content;
+        announcementExpiresInput.value = isoToLocalDateTime(item.expires_at);
+        announcementMessage.textContent = "Editing: " + item.title + ". Choose Save Draft or Publish to save changes.";
+        announcementForm.scrollIntoView({ behavior: "smooth", block: "start" });
+      });
+      card.appendChild(edit);
+
+      if (item.status !== "archived") {
+        const archive = document.createElement("button");
+        archive.type = "button";
+        archive.textContent = "Archive";
+        archive.style.cssText = "padding:8px 12px; margin:4px; cursor:pointer;";
+        archive.addEventListener("click", async function () {
+          if (!window.confirm('Archive "' + item.title + '"?')) return;
+          archive.disabled = true;
+          try {
+            const { error: updateError } = await supabaseClient
+              .from("e_nexus_announcements")
+              .update({ status: "archived", updated_by: currentAdminUser.id, updated_at: new Date().toISOString() })
+              .eq("id", item.id);
+            if (updateError) throw updateError;
+            announcementMessage.textContent = "Announcement archived.";
+            await loadAdminAnnouncements();
+            await loadPublicAnnouncements();
+          } catch (error) {
+            announcementMessage.textContent = "Could not archive announcement: " + (error.message || "Unknown error");
+            archive.disabled = false;
+          }
+        });
+        card.appendChild(archive);
+      }
+      adminAnnouncementsList.appendChild(card);
+    });
+  } catch (error) {
+    announcementMessage.textContent = "Could not load announcements: " + (error.message || "Unknown error");
+  } finally {
+    if (adminAnnouncementsRefresh) adminAnnouncementsRefresh.disabled = false;
+  }
+}
+
+async function loadPublicAnnouncements() {
+  if (!publicAnnouncementsList || !publicAnnouncementsMessage) return;
+  publicAnnouncementsList.replaceChildren();
+  publicAnnouncementsMessage.textContent = "Loading published announcements...";
+  if (publicAnnouncementsRefresh) publicAnnouncementsRefresh.disabled = true;
+
+  try {
+    const { data, error } = await supabaseClient
+      .from("e_nexus_announcements")
+      .select("id, title, category, content, published_at, expires_at")
+      .eq("status", "published")
+      .or("published_at.is.null,published_at.lte." + new Date().toISOString())
+      .order("published_at", { ascending: false, nullsFirst: false });
+    if (error) throw error;
+
+    const now = Date.now();
+    const current = (data || []).filter(item => !item.expires_at || new Date(item.expires_at).getTime() > now);
+    if (current.length === 0) {
+      publicAnnouncementsMessage.textContent = "There are no current published announcements.";
+      return;
+    }
+
+    publicAnnouncementsMessage.textContent = current.length + " current announcement(s).";
+    current.forEach(function (item) {
+      const card = document.createElement("article");
+      card.style.cssText = "margin:14px 0; padding:16px; border:1px solid #dce4ef; border-radius:10px; background:#fff;";
+      const heading = document.createElement("h3");
+      heading.textContent = item.title;
+      heading.style.color = "#12345a";
+      card.appendChild(heading);
+      const meta = document.createElement("p");
+      meta.style.cssText = "font-size:13px; color:#65748b;";
+      meta.textContent = item.category + (item.published_at ? " | Published: " + formatRequestDate(item.published_at) : "");
+      card.appendChild(meta);
+      const content = document.createElement("p");
+      content.style.whiteSpace = "pre-wrap";
+      content.textContent = item.content;
+      card.appendChild(content);
+      publicAnnouncementsList.appendChild(card);
+    });
+  } catch (error) {
+    publicAnnouncementsMessage.textContent = "Could not load announcements: " + (error.message || "Unknown error");
+  } finally {
+    if (publicAnnouncementsRefresh) publicAnnouncementsRefresh.disabled = false;
+  }
+}
+
+if (saveDraftButton) saveDraftButton.addEventListener("click", () => saveAnnouncement("draft"));
+if (publishAnnouncementButton) publishAnnouncementButton.addEventListener("click", () => saveAnnouncement("published"));
+if (clearAnnouncementButton) clearAnnouncementButton.addEventListener("click", resetAnnouncementForm);
+if (adminAnnouncementsRefresh) adminAnnouncementsRefresh.addEventListener("click", loadAdminAnnouncements);
+if (publicAnnouncementsRefresh) publicAnnouncementsRefresh.addEventListener("click", loadPublicAnnouncements);
+
+if (logoutButton) {
+  logoutButton.addEventListener("click", async function () {
+    logoutButton.disabled = true;
+
+    try {
+      const { error } = await supabaseClient.auth.signOut();
+      if (error) throw error;
+
+      showLogin();
+      message.textContent = "You have signed out successfully.";
+    } catch (error) {
+      message.textContent = "Unable to sign out. Please try again.";
+    } finally {
+      logoutButton.disabled = false;
+    }
+  });
+}
+
+// Load public announcements on page load.
+loadPublicAnnouncements();
+
+// Restore an existing session and verify its account.
+(async function restoreSession() {
+  try {
+    const { data, error } = await supabaseClient.auth.getSession();
+    if (error) throw error;
+
+    if (data.session) {
+      const profile = await verifyProfile(data.session.user);
+      currentAdminUser = data.session.user;
+      showDashboard(profile);
+    } else {
+      showLogin();
+    }
+  } catch (error) {
+    await supabaseClient.auth.signOut();
+    showLogin();
+  }
+})();
+
+</script>
+<!-- End e-NEXUS login handler -->
+
+</body>
+</html>
